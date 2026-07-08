@@ -20,6 +20,8 @@ This repo is the **server side** of that system, plus a software simulator of th
 10. [Honest limitations of the concept](#honest-limitations-of-the-concept)
 
 ---
+<img width="1897" height="895" alt="Screenshot 2026-07-09 022629" src="https://github.com/user-attachments/assets/31ef119a-727c-4e28-b6d9-84ef388ef26a" />
+
 
 ## What this demo proves
 
