@@ -1,10 +1,41 @@
-# SwiftUPI - Offline UPI via Mesh
+# swiftupi
 
-A Spring Boot backend that demonstrates **offline UPI payments routed through a Bluetooth-style mesh network**. You're in a basement with zero connectivity. You send your friend ₹500. Your phone encrypts the payment, broadcasts it to nearby phones, and the packet hops device-to-device until *some* phone walks outside, gets 4G, and silently uploads it to this backend. The backend decrypts, deduplicates, and settles.
+exploring offline upi payments through bluetooth mesh.
 
-This repo is the **server side** of that system, plus a software simulator of the mesh so you can demo the whole flow on a single laptop without any real Bluetooth hardware.
+> 🚧 **currently in active development.**
+> i'm still building and improving this project as i learn more about distributed systems, backend engineering, cryptography and payment infrastructure.
 
---
+---
+
+## why i built this
+
+i've always been curious about what happens after we tap **"pay"**.
+
+most payment systems depend on an internet connection, but i kept wondering:
+
+> what if two people needed to send money where there was no network at all?
+
+swiftupi is my attempt to explore that idea.
+
+the goal isn't to replace upi or build a production-ready payment system. it's to understand how concepts like mesh networking, hybrid encryption, idempotency and deferred settlement could work together in an offline-first environment.
+
+---
+
+## the idea
+
+imagine you're in a basement with zero connectivity.
+
+you send your friend ₹500.
+
+your phone encrypts the payment, broadcasts it to nearby phones, and the packet hops from device to device until someone eventually reaches the internet.
+
+that's where this backend takes over.
+
+it validates the packet, rejects duplicates, decrypts the payment and settles it exactly once.
+
+this repository contains the spring boot backend for that system, along with a software-based mesh simulator so the complete flow can be demonstrated on a single machine.
+
+---
 
 ## Table of Contents
 
@@ -405,3 +436,13 @@ For a college / portfolio project: name the concept honestly as **"mesh-routed d
 ## License
 
 Demo code, no license. Use it however you want for learning.
+
+---
+
+swiftupi is still evolving.
+
+there's a lot left to build, improve and question, and that's exactly what makes this project exciting.
+
+see you in the next build.
+
+— aps
